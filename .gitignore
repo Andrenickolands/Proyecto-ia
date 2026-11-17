@@ -3,3 +3,8 @@ resultados/
 resultados.zip
 __pycache__/
 .ipynb_checkpoints/
+fotos_propias/
+100_Huecos_Bogota/
+*.zip
+*.zip.listo
+hoja_para_etiquetar.png

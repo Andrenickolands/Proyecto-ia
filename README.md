@@ -50,3 +50,14 @@ Las semillas están fijas (42) y la división train/val/test se hace antes de cu
 - La severidad es una etiqueta débil: depende de qué tan cerca se tomó la foto.
 - La prioridad es una sugerencia.
   
+
+## Prueba de campo con fotos de Bogotá
+
+RDD2022 no tiene fotos de Colombia, así que la sección 11 del notebook evalúa el modelo con fotos propias.
+
+1. Generar las fotos: con `herramientas/descargar_huecos.py` y `herramientas/Inventario_Huecos_Bogota.xlsx` en la misma carpeta, ejecutar `pip install requests openpyxl pillow` y `python descargar_huecos.py`. Sale `100_Huecos_Bogota.zip`. También sirven fotos tomadas con el celular (JPG, PNG, WEBP o BMP).
+2. En Colab, ejecutar la sección 11 y subir el ZIP o las fotos. La primera vez crea `etiquetas_bogota.csv` y una hoja con las fotos numeradas, sin mostrar predicciones.
+3. Llenar `severidad` (baja, media o alta) y, si se sabe, `posicion` (carril o borde). Volver a ejecutar la celda.
+4. Sale `resultados/predicciones_bogota.csv`, la matriz de confusión, Grad-CAM sobre las fotos y las métricas en `resultados.json`.
+
+Las fotos de prensa tienen derechos de autor: se usan solo para evaluar y no se suben a este repositorio (están en `.gitignore`).
