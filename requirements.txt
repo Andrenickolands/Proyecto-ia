@@ -1,0 +1,11 @@
+tensorflow>=2.15
+scikit-learn
+scikit-image
+opencv-python-headless
+pandas
+numpy
+matplotlib
+transformers
+torch
+accelerate
+gradio
