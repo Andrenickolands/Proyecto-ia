@@ -48,9 +48,5 @@ Las semillas están fijas (42) y la división train/val/test se hace antes de cu
 ## Límites
 
 - La severidad es una etiqueta débil: depende de qué tan cerca se tomó la foto.
-- RDD2022 no tiene fotos de Colombia, así que el modelo puede fallar con nuestras vías.
-- La prioridad es una sugerencia. La decisión la toma una persona.
-
-## Uso de IA generativa
-
-Se usó Claude (Anthropic) como apoyo para estructurar el plan de trabajo, el informe y el código del notebook.
+- La prioridad es una sugerencia.
+  
