@@ -61,3 +61,14 @@ RDD2022 no tiene fotos de Colombia, así que la sección 11 del notebook evalúa
 4. Sale `resultados/predicciones_bogota.csv`, la matriz de confusión, Grad-CAM sobre las fotos y las métricas en `resultados.json`.
 
 Las fotos de prensa tienen derechos de autor: se usan solo para evaluar y no se suben a este repositorio (están en `.gitignore`).
+
+## Resultados guardados
+
+| Carpeta | Qué tiene |
+| --- | --- |
+| `resultados_ejecucion/prueba_1/` | Primera ejecución completa: métricas en `resultados.json` y figuras del informe |
+| `resultados_ejecucion/prueba_2/` | Segunda ejecución completa, con la prueba de campo en Bogotá (`prueba_campo` en `resultados.json`), las etiquetas manuales (`etiquetas_bogota.csv`), la matriz de Bogotá y el modelo entrenado (`modelo_severidad.keras`) |
+
+La figura de Grad-CAM sobre fotos de Bogotá no se sube porque muestra fotos de prensa con derechos de autor; está en el informe.
+
+Para la demo sin reentrenar: copiar `resultados_ejecucion/prueba_2/modelo_severidad.keras` y `config.json` a una carpeta `resultados/` y ejecutar `python app.py`.

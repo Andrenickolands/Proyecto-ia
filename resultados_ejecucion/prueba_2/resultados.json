@@ -1,0 +1,496 @@
+{
+ "fecha_ejecucion": "2026-11-17T21:56:04",
+ "semilla": 42,
+ "paises": [
+  "India"
+ ],
+ "img": 160,
+ "fuente_descarga": "Hugging Face akiii1234/RoadDamageDetection (copia derivada de RDD2022)",
+ "fecha_descarga": "2026-11-17",
+ "tam_zip_GB": 8.97,
+ "eda": {
+  "imagenes": 32385,
+  "sin_danio": 9865,
+  "instancias_por_tipo": {
+   "Grieta longitudinal": 21900,
+   "Grieta transversal": 9963,
+   "Piel de cocodrilo": 8922,
+   "Bache": 9018
+  },
+  "imagenes_con_bache": 6279,
+  "resoluciones": "{(1.0, 1.0): 32385}"
+ },
+ "cortes_severidad": {
+  "baja_media": 0.020579559000666624,
+  "media_alta": 0.10533897666666668
+ },
+ "division": {
+  "train": {
+   "n": 4200,
+   "por_clase": {
+    "baja": 1400,
+    "media": 1400,
+    "alta": 1400
+   }
+  },
+  "val": {
+   "n": 900,
+   "por_clase": {
+    "baja": 320,
+    "media": 292,
+    "alta": 288
+   }
+  },
+  "test": {
+   "n": 900,
+   "por_clase": {
+    "baja": 330,
+    "media": 304,
+    "alta": 266
+   }
+  }
+ },
+ "epocas": {
+  "CNN propia": 5,
+  "MobileNetV2 (transfer learning)": 12
+ },
+ "test": {
+  "Clase mayoritaria": {
+   "recall_alta": 0.0,
+   "f1_macro": 0.179,
+   "exactitud": 0.367
+  },
+  "Linea base (HOG + RL)": {
+   "recall_alta": 0.53,
+   "f1_macro": 0.492,
+   "exactitud": 0.489
+  },
+  "CNN propia": {
+   "recall_alta": 0.305,
+   "f1_macro": 0.411,
+   "exactitud": 0.438
+  },
+  "MobileNetV2 (transfer learning)": {
+   "recall_alta": 0.643,
+   "f1_macro": 0.582,
+   "exactitud": 0.577
+  }
+ },
+ "matrices": {
+  "Clase mayoritaria": [
+   [
+    330,
+    0,
+    0
+   ],
+   [
+    304,
+    0,
+    0
+   ],
+   [
+    266,
+    0,
+    0
+   ]
+  ],
+  "Linea base (HOG + RL)": [
+   [
+    156,
+    130,
+    44
+   ],
+   [
+    89,
+    143,
+    72
+   ],
+   [
+    49,
+    76,
+    141
+   ]
+  ],
+  "CNN propia": [
+   [
+    236,
+    73,
+    21
+   ],
+   [
+    183,
+    77,
+    44
+   ],
+   [
+    149,
+    36,
+    81
+   ]
+  ],
+  "MobileNetV2 (transfer learning)": [
+   [
+    178,
+    120,
+    32
+   ],
+   [
+    74,
+    170,
+    60
+   ],
+   [
+    15,
+    80,
+    171
+   ]
+  ]
+ },
+ "mejor_modelo": "MobileNetV2 (transfer learning)",
+ "errores": [
+  {
+   "caso": 1,
+   "archivo": "034740.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.2977,
+   "n_baches": 3,
+   "otros_danios": 1,
+   "brillo_medio": 128.7,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 2,
+   "archivo": "031801.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.2925,
+   "n_baches": 3,
+   "otros_danios": 2,
+   "brillo_medio": 103.7,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 3,
+   "archivo": "005901.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.2464,
+   "n_baches": 2,
+   "otros_danios": 0,
+   "brillo_medio": 118.9,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 4,
+   "archivo": "035520.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.2306,
+   "n_baches": 3,
+   "otros_danios": 0,
+   "brillo_medio": 87.3,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 5,
+   "archivo": "027768.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.2032,
+   "n_baches": 1,
+   "otros_danios": 3,
+   "brillo_medio": 65.5,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 6,
+   "archivo": "009660.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.1797,
+   "n_baches": 2,
+   "otros_danios": 1,
+   "brillo_medio": 98.7,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 7,
+   "archivo": "031999.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.1777,
+   "n_baches": 2,
+   "otros_danios": 2,
+   "brillo_medio": 122.6,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 8,
+   "archivo": "033557.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.1595,
+   "n_baches": 2,
+   "otros_danios": 0,
+   "brillo_medio": 92.7,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 9,
+   "archivo": "027668.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.1559,
+   "n_baches": 1,
+   "otros_danios": 3,
+   "brillo_medio": 111.4,
+   "cerca_del_corte": false
+  },
+  {
+   "caso": 10,
+   "archivo": "017722.jpg",
+   "real": "alta",
+   "pred": "baja",
+   "puntaje_area": 0.1495,
+   "n_baches": 3,
+   "otros_danios": 2,
+   "brillo_medio": 116.0,
+   "cerca_del_corte": false
+  }
+ ],
+ "tipo_error": {
+  "subestima (pred < real)": 169,
+  "sobreestima (pred > real)": 212,
+  "alta_marcada_como_baja": 15
+ },
+ "reportes": [
+  {
+   "archivo": "015839.jpg",
+   "n": 1,
+   "sev": "alta",
+   "conf": 0.6415484547615051,
+   "pos": "carril",
+   "riesgo": "Crítico",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 1 bache en la imagen, con una confianza de alta y una seguridad visual alta. Se ha marcado el carril de circulación como la posición más segura. La prioridad está considerada crítica debido a la gravidade del daño y la posibilidad de riesgos potenciales. Una recomendación automática sería realizar un seguimiento continuo para garantizar la seguridad y evitar futuros daños similares.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": false,
+    "menciona_posicion": true,
+    "aclara_validacion_humana": false,
+    "longitud_ok": true
+   },
+   "puntos": 3
+  },
+  {
+   "archivo": "029584.jpg",
+   "n": 2,
+   "sev": "media",
+   "conf": 0.4910002052783966,
+   "pos": "borde",
+   "riesgo": "Media",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 2 baches en la imagen, con una severidad visual estimada de \"media\" (con confianza de 49%) y una posibilidad de que se encuentren en la borde o la berma del camino. El riesgo sugerido está en la categoría de \"Media\", lo cual requiere una evaluación manual y la revisión por parte de un profesional.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": true,
+    "menciona_posicion": true,
+    "aclara_validacion_humana": true,
+    "longitud_ok": true
+   },
+   "puntos": 5
+  },
+  {
+   "archivo": "000128.jpg",
+   "n": 1,
+   "sev": "alta",
+   "conf": 0.67600017786026,
+   "pos": "carril",
+   "riesgo": "Crítico",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 1 bache en la imagen, con una confianza de alta y una seguridad visual alta. Se ha marcado el carril de circulación como la posición más segura. La prioridad está considerada crítica debido a la magnitud del daño y la alta seguridad visual. Una recomendación automática sería realizar un reparo urgente al bache para garantizar la seguridad de las personas y evitar posibles accidentes.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": false,
+    "menciona_posicion": true,
+    "aclara_validacion_humana": true,
+    "longitud_ok": true
+   },
+   "puntos": 4
+  },
+  {
+   "archivo": "015553.jpg",
+   "n": 1,
+   "sev": "media",
+   "conf": 0.5970932841300964,
+   "pos": "borde",
+   "riesgo": "Media",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 1 bache en la imagen, con una severidad visual estimada de media (con confianza de 60%) y una posibilidad de que se encuentre en la borde o la berma del camino. El riesgo sugerido es moderado, y la prioridad está siendo evaluada por una persona.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": true,
+    "menciona_posicion": true,
+    "aclara_validacion_humana": true,
+    "longitud_ok": true
+   },
+   "puntos": 5
+  },
+  {
+   "archivo": "006947.jpg",
+   "n": 1,
+   "sev": "alta",
+   "conf": 0.9284389019012451,
+   "pos": "carril",
+   "riesgo": "Crítico",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 1 bache en la imagen, con una confianza de alta. Esta situación está considerada severa debido a su posibilidad de causar daños significativos al tráfico. El bache se encuentra en la carretera de circulación, y la prioridad es solicitar una recomendación automática.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": false,
+    "menciona_posicion": false,
+    "aclara_validacion_humana": false,
+    "longitud_ok": true
+   },
+   "puntos": 2
+  },
+  {
+   "archivo": "029100.jpg",
+   "n": 1,
+   "sev": "media",
+   "conf": 0.703389048576355,
+   "pos": "borde",
+   "riesgo": "Media",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 1 bache en la imagen, con una severidad visual estimada de media (con confianza de 70%) y una posibilidad de que se encuentre en la borde o la berma del camino. El riesgo sugerido está en la mediana, y la prioridad es una sugerencia automática.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": true,
+    "menciona_posicion": true,
+    "aclara_validacion_humana": false,
+    "longitud_ok": true
+   },
+   "puntos": 4
+  },
+  {
+   "archivo": "019713.jpg",
+   "n": 2,
+   "sev": "baja",
+   "conf": 0.4876689910888672,
+   "pos": "carril",
+   "riesgo": "Media",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 2 baches en la imagen, con una confianza de 49%. Esta situación está considerada baja, lo que sugiere una necesidad de atención urgente. La posibilidad de que este tipo de daño afecte a la circulación es significativa, ya que puede causar problemas de seguridad. Por lo tanto, se solicita una evaluación rápida y recomendable por parte de un profesional de la salud pública o un experto en tráfico.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": false,
+    "menciona_posicion": false,
+    "aclara_validacion_humana": false,
+    "longitud_ok": true
+   },
+   "puntos": 2
+  },
+  {
+   "archivo": "029263.jpg",
+   "n": 2,
+   "sev": "baja",
+   "conf": 0.3868703544139862,
+   "pos": "borde",
+   "riesgo": "Baja",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 2 baches en la imagen, con una confianza de 39%. Esta situación está considerada baja en la visión del modelo, lo que sugiere un riesgo moderado. El risco sugerido es Baja, y la prioridad es una sugerencia automática. Una evaluación por una persona será necesaria para tomar una decisión más precisa.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": true,
+    "menciona_posicion": false,
+    "aclara_validacion_humana": true,
+    "longitud_ok": true
+   },
+   "puntos": 4
+  },
+  {
+   "archivo": "007651.jpg",
+   "n": 3,
+   "sev": "media",
+   "conf": 0.6857879161834717,
+   "pos": "carril",
+   "riesgo": "Alta",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 3 baches en la imagen, con una severidad visual estimada de media confianza de 69%. La posibilidad de riesgo es alta debido a la magnitud del daño. La prioridad es una sugerencia automática, ya que no hay indicaciones de riesgo significativo.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": true,
+    "menciona_posicion": false,
+    "aclara_validacion_humana": false,
+    "longitud_ok": true
+   },
+   "puntos": 3
+  },
+  {
+   "archivo": "004243.jpg",
+   "n": 1,
+   "sev": "baja",
+   "conf": 0.5110459327697754,
+   "pos": "borde",
+   "riesgo": "Baja",
+   "origen": "modelo de lenguaje",
+   "reporte": "El reporte de daño vial indica que se han identificado 1 bache en la imagen, con una confianza de 51%. Esta situación está considerada baja en la visión del modelo, con una posibilidad de riesgo moderado. La recomendación es una sugerencia automática, ya que no hay evidencia de alta seguridad.",
+   "chequeo": {
+    "menciona_severidad": true,
+    "menciona_riesgo": true,
+    "menciona_posicion": false,
+    "aclara_validacion_humana": false,
+    "longitud_ok": true
+   },
+   "puntos": 3
+  }
+ ],
+ "reportes_resumen": {
+  "origen": "modelo de lenguaje",
+  "promedio_puntos_de_5": 3.5,
+  "por_criterio": {
+   "menciona_severidad": 10,
+   "menciona_riesgo": 6,
+   "menciona_posicion": 5,
+   "aclara_validacion_humana": 4,
+   "longitud_ok": 10
+  }
+ },
+ "prueba_campo": {
+  "n_fotos": 31,
+  "n_etiquetadas": 18,
+  "posicion_supuesta": 13,
+  "predicciones_por_clase": {
+   "baja": 16,
+   "media": 9,
+   "alta": 6
+  },
+  "recall_alta": 0.214,
+  "f1_macro": 0.222,
+  "exactitud": 0.278,
+  "matriz": [
+   [
+    2,
+    0,
+    0
+   ],
+   [
+    1,
+    0,
+    1
+   ],
+   [
+    7,
+    4,
+    3
+   ]
+  ],
+  "etiquetas_reales_por_clase": {
+   "alta": 14,
+   "media": 2,
+   "baja": 2
+  },
+  "alta_marcada_como_baja": 7
+ }
+}
